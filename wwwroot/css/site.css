@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background: #f6f7fb;
+  color: #18202f;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.hero-panel {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e4e7ef;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 28px;
+}
+
+.hero-panel h1 {
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.eyebrow {
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.priority {
+  align-items: center;
+  background: #ffe8cc;
+  border-radius: 999px;
+  color: #7a3e00;
+  display: inline-flex;
+  font-weight: 700;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.task-form {
+  background: #ffffff;
+  border: 1px solid #e4e7ef;
+  border-radius: 8px;
+  max-width: 720px;
+  padding: 24px;
+}
+
+.task-form .form-label {
+  font-weight: 700;
+  margin-top: 14px;
+}

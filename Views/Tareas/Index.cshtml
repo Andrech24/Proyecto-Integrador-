@@ -1,0 +1,43 @@
+@model IEnumerable<TaskFlowSolid.DTOs.TareaResponseDto>
+
+@{
+    ViewData["Title"] = "Tareas academicas";
+}
+
+<section class="hero-panel">
+    <div>
+        <p class="eyebrow">TaskFlow SOLID</p>
+        <h1>Gestion de tareas academicas</h1>
+        <p>Proyecto Core MVC con API JSON y consumo desde React.</p>
+    </div>
+    <a class="btn btn-primary" asp-controller="Tareas" asp-action="Create">Nueva tarea</a>
+</section>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Tarea</th>
+            <th>Materia</th>
+            <th>Entrega</th>
+            <th>Estado</th>
+            <th>Prioridad</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var tarea in Model)
+    {
+        <tr>
+            <td>
+                <strong>@tarea.Titulo</strong>
+                <div class="text-muted">@tarea.Descripcion</div>
+            </td>
+            <td>@tarea.Materia</td>
+            <td>@tarea.FechaEntrega.ToString("yyyy-MM-dd")</td>
+            <td><span class="badge bg-secondary">@tarea.Estado</span></td>
+            <td><span class="priority">@tarea.Prioridad</span></td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a href="/react-app/index.html" class="btn btn-outline-dark">Abrir cliente React</a>

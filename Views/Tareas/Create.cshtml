@@ -1,0 +1,33 @@
+@model TaskFlowSolid.DTOs.TareaCreateDto
+
+@{
+    ViewData["Title"] = "Nueva tarea";
+}
+
+<h1>Nueva tarea</h1>
+
+<form asp-action="Create" method="post" class="task-form">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <label asp-for="Titulo" class="form-label"></label>
+    <input asp-for="Titulo" class="form-control" />
+    <span asp-validation-for="Titulo" class="text-danger"></span>
+
+    <label asp-for="Descripcion" class="form-label"></label>
+    <textarea asp-for="Descripcion" class="form-control"></textarea>
+
+    <label asp-for="Materia" class="form-label"></label>
+    <input asp-for="Materia" class="form-control" />
+    <span asp-validation-for="Materia" class="text-danger"></span>
+
+    <label asp-for="FechaEntrega" class="form-label"></label>
+    <input asp-for="FechaEntrega" class="form-control" type="date" />
+    <span asp-validation-for="FechaEntrega" class="text-danger"></span>
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+    <a asp-action="Index" class="btn btn-link mt-3">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
